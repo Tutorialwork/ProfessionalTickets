@@ -106,7 +106,7 @@
       while($row = mysqli_fetch_array($ergebnis)){
         echo '<tr>
         <td>'.$row["id"].'</td>
-        <td>'.$row["title"].'</td>
+        <td>'.htmlspecialchars($row["title"], ENT_QUOTES, 'UTF-8').'</td>
         <td>'.$row["category"].'</td>';
 
         if($row["status"] == 0){
@@ -161,7 +161,7 @@ Delete
       while($row = mysqli_fetch_array($ergebnis)){
         echo '<tr>
         <td>'.$row["id"].'</td>
-        <td>'.$row["title"].'</td>
+        <td>'.htmlspecialchars($row["title"], ENT_QUOTES, 'UTF-8').'</td>
         <td>'.$row["category"].'</td>';
 
         if($row["status"] == 0){
@@ -220,7 +220,7 @@ Delete
       $data++;
       echo '<tr>
       <td>'.$row["id"].'</td>
-      <td>'.$row["title"].'</td>
+      <td>'.htmlspecialchars($row["title"], ENT_QUOTES, 'UTF-8').'</td>
       <td>'.$row["category"].'</td>';
 
       if($row["status"] == 0){

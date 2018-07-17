@@ -266,7 +266,7 @@ float: left;
               $own = false;
             }
             echo '<div class="ui container">
-              <h1>'.$row["title"].' | Ticket #'.$row["id"].'</h1>';
+              <h1>'.htmlspecialchars($row["title"], ENT_QUOTES, 'UTF-8').' | Ticket #'.$row["id"].'</h1>';
               $time = date('Y-m-d H:i:s',$row["created_at"]);
               echo '<p>This ticket was created from '.$row["ticketauthor"].' at '.$time.'.</p><br>
               <p>Status: <strong>';
@@ -293,7 +293,7 @@ float: left;
 
               echo '<section>
             <div class="from-me">
-              <p>'.$row["message"].'</p>
+              <p>'.htmlspecialchars($row["message"], ENT_QUOTES, 'UTF-8').'</p>
             </div>';
             if($row["answer"] != "null"){
               echo '<div class="clear"></div>
