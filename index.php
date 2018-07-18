@@ -77,7 +77,7 @@
       <?php
 
       $site = file_get_contents('http://tutorialwork.bplaced.net/update/web/ProfessionalTickets.html');
-      $currentversion = "1.0";
+      $currentversion = "1.1.1";
       if($currentversion != $site){
         $user = $_SESSION["username"];
         $abfrage = "SELECT * FROM users WHERE username = '$user'";
