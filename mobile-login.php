@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="lib/semantic.min.css">
     <script
@@ -30,14 +31,6 @@
   </p></div></div>';
         exit;
 	    }
-
-      include('lib/Mobile_Detect.php');
-      $detect = new Mobile_Detect();
-
-      if($detect->isMobile()){
-        header("Location: mobile-login.php");
-        exit;
-      }
 
     include('database.php');
     $abfrage = "CREATE TABLE IF NOT EXISTS `users` (
@@ -622,63 +615,51 @@
 
      <br>
 
-    <div class="ui grid">
-      <div class="two column large screen only row">
-        <div class="column">
-          <div class="ui segment">
-            <form class="ui form" action="login.php?login" method="post">
-              <h1><i class="user alternate icon"></i>Login</h1>
-              <div class="field">
-                <label>Username</label>
-                <input type="text" name="username" placeholder="Username" required>
-              </div>
-              <div class="field">
-                <label>Password</label>
-                <input type="password" name="password" placeholder="Password" required>
-              </div>
-              <?php
-              include('recaptcha-settings.php');
-              if($enabled == true){
-                echo '<div class="g-recaptcha" data-sitekey="'.$sitekey.'"></div><br>';
-              }
-               ?>
-              <button class="ui button" type="submit">Login</button>
-            </form>
-          </div>
-        </div>
-        <div class="column">
-          <div class="ui segment">
-            <form class="ui form" action="login.php?register" method="post">
-              <h1><i class="add user alternate icon"></i>Create a new account</h1>
-              <div class="field">
-                <label>Username</label>
-                <input type="text" name="username" placeholder="Username" required>
-              </div>
-              <div class="field">
-                <label>Email</label>
-                <input type="email" name="email" placeholder="Email" required>
-              </div>
-              <div class="field">
-                <label>Password</label>
-                <input type="password" name="password" placeholder="Password" required>
-              </div>
-              <div class="field">
-                <label>Repeat password</label>
-                <input type="password" name="rpassword" placeholder="Repeat password" required>
-              </div>
-              <?php
-              include('recaptcha-settings.php');
-              if($enabled == true){
-                echo '<div class="g-recaptcha" data-sitekey="'.$sitekey.'"></div><br>';
-              }
-               ?>
-              <button class="ui button" type="submit">Create account</button>
-            </form>
-          </div>
-        </div>
-      </div>
+     <h1><i class="user alternate icon"></i>Login</h1>
+     <form class="ui form" action="mobile-login.php?login" method="post">
+       <div class="field">
+         <label>Username</label>
+         <input type="text" name="username" placeholder="Username" required>
+       </div>
+       <div class="field">
+         <label>Password</label>
+         <input type="password" name="password" placeholder="Password" required>
+       </div>
+       <?php
+       include('recaptcha-settings.php');
+       if($enabled == true){
+         echo '<div class="g-recaptcha" data-sitekey="'.$sitekey.'"></div><br>';
+       }
+        ?>
+       <button class="ui button" type="submit">Login</button>
+</form>
 
-    </div>
+<h1><i class="add user alternate icon"></i>Register</h1>
+<form class="ui form" action="mobile-login.php?register" method="post">
+  <div class="field">
+    <label>Username</label>
+    <input type="text" name="username" placeholder="Username" required>
+  </div>
+  <div class="field">
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Email" required>
+  </div>
+  <div class="field">
+    <label>Password</label>
+    <input type="password" name="password" placeholder="Password" required>
+  </div>
+  <div class="field">
+    <label>Repeat password</label>
+    <input type="password" name="rpassword" placeholder="Repeat password" required>
+  </div>
+  <?php
+  include('recaptcha-settings.php');
+  if($enabled == true){
+    echo '<div class="g-recaptcha" data-sitekey="'.$sitekey.'"></div><br>';
+  }
+   ?>
+  <button class="ui button" type="submit">Create account</button>
+</form>
 
   </body>
 </html>
