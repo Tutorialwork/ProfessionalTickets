@@ -1,0 +1,150 @@
+html, body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: #11998e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.flex{
+  display: flex;
+  justify-content: center;
+}
+.flex-item{
+  background: white;
+  padding: 3%;
+  margin: 2%;
+  width: 100%;
+}
+.flex-item:hover{
+  transition: all 0.35s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.sidebar{
+  flex-basis: 25%;
+}
+.login{
+  flex-basis: 50%;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+ul li a:hover{
+  transition: all 0.25s;
+  color: #38ef7d;
+}
+input, textarea, button, .btn{
+  margin-bottom: 1%;
+  width: 100%;
+  border: 2px solid #38ef7d;
+  padding: 1.5%;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  background: none;
+  color: grey;
+}
+input:hover, textarea:hover, select:hover{
+  transition: all 0.35s;
+  border: 2px solid #11998e;
+}
+button:hover, .btn:hover{
+  transition: all 0.35s;
+  border: 2px solid #11998e;
+  background: #11998e;
+  color: white;
+}
+select{
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 1.5%;
+  margin-bottom: 1%;
+  width: 100%;
+  border: 2px solid #38ef7d;
+  outline: none;
+  background: none;
+  border-radius: 0;
+  font-size: 16px;
+  color: grey;
+}
+a{
+  text-decoration: none;
+  color: grey;
+}
+a:hover{
+  transition: all 0.3s;
+  color: #38ef7d;
+}
+.success{
+  border: 2px solid #38ef7d;
+  padding: 2.5%;
+}
+.error{
+  border: 2px solid #ff5b5b;
+  padding: 2.5%;
+}
+th{
+  background: #38ef7d;
+  padding: 2%;
+  color: white;
+  text-align: center;
+  width: 10%;
+}
+td{
+  text-align: center;
+  background: #f9f9f9;
+  padding: 1%;
+}
+td .btn{
+  border: none;
+}
+td .btn:hover{
+  border: none;
+  background: none;
+  color: #38ef7d;
+}
+table tr:nth-of-type(odd) td {
+  background-color: #efefef;
+}
+.head{
+  float: left;
+  margin-right: 2%;
+}
+.detail{
+  color: grey;
+  font-size: 70%;
+}
+.icon-card i{
+  color: black;
+  float: right;
+  margin-top: -23%;
+}
+.icon-card i:hover{
+  transition: all 0.4s;
+  color: #38ef7d;
+}
+.icon-card-big i{
+  color: black;
+  float: right;
+  margin-top: -10%;
+}
+.icon-card-big i:hover{
+  transition: all 0.4s;
+  color: #38ef7d;
+}
+.faq ul li{
+  background: #38ef7d;
+  padding: 2%;
+  margin-top: 2%;
+}
+.faq i{
+  float: right;
+  margin-top: 0.5%;
+}
+.faq ul div{
+  background: #efefef;
+  padding: 2%;
+}
