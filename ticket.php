@@ -11,11 +11,13 @@ if(!isset($_SESSION["username"])){
   <meta http-equiv="refresh" content="0; URL=login.php">
   <?php
   exit;
-} else if(getAccountRank($_SESSION["username"]) == 0 || $_SESSION["username"] != getAccountName(getTicketCreatorID($_GET["id"]))){
-  ?>
-  <meta http-equiv="refresh" content="0; URL=mytickets.php">
-  <?php
-  exit;
+} else if($_SESSION["username"] != getAccountName(getTicketCreatorID($_GET["id"]))){
+  if(getAccountRank($_SESSION["username"]) < 1){
+    ?>
+    <meta http-equiv="refresh" content="0; URL=mytickets.php">
+    <?php
+    exit;
+  }
 }
  ?>
 <!DOCTYPE html>

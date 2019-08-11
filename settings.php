@@ -65,9 +65,9 @@ if(!isset($_SESSION["username"])){
         <p><?php echo RANK; ?>: <strong><?php
         if(getAccountRank($_SESSION["username"]) == 3 || getAccountRank($_SESSION["username"]) == 2){
           echo "Admin";
-        } else if(getAccountRank($_SESSION["username"]) == 2){
-          echo "Team";
         } else if(getAccountRank($_SESSION["username"]) == 1){
+          echo "Team";
+        } else if(getAccountRank($_SESSION["username"]) == 0){
           echo MEMBER;
         }
          ?></strong> </p>

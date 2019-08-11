@@ -41,10 +41,37 @@ if(!isset($_SESSION["username"])){
           }
         }
          ?>
-        <h1><?php echo OPEN_TICKETS; ?></h1>
+        <?php
+        if(isset($_GET["archive"])){
+          ?>
+          <h1><?php echo ALL_TICKETS; ?></h1>
+          <?php
+        } else {
+          ?>
+          <h1><?php echo OPEN_TICKETS; ?></h1>
+          <?php
+        }
+        ?>
+        <div class="icon-card-big">
+          <?php
+          if(isset($_GET["archive"])){
+            ?>
+            <a href="search.php"><i class="fas fa-search fa-2x"></i></a>
+            <?php
+          } else {
+            ?>
+            <a href="team.php?archive"><i class="fas fa-archive fa-2x"></i></a>
+            <?php
+          }
+          ?>
+        </div>
         <?php
         require("mysql.php");
-        $stmt = $mysql->prepare("SELECT * FROM tickets WHERE STATUS = 0 ORDER BY CREATIONDATE DESC");
+        if(isset($_GET["archive"])){
+          $stmt = $mysql->prepare("SELECT * FROM tickets ORDER BY CREATIONDATE DESC");
+        } else {
+          $stmt = $mysql->prepare("SELECT * FROM tickets WHERE STATUS = 0 ORDER BY CREATIONDATE DESC");
+        }
         $stmt->execute();
         $count = $stmt->rowCount();
         if($count != 0){

@@ -57,6 +57,7 @@ define("NO_TICKET", "Du hast derzeit keine Tickets.");
 define("MY_TICKETS", "Meine Tickets");
 //team.php
 define("OPEN_TICKETS", "Offene Tickets");
+define("ALL_TICKETS", "Alle Tickets");
 define("NO_OPEN", "Derzeit gibt es keine offene Tickets.");
 //ticket.php
 define("CREATED_BY", "Erstellt von");
@@ -86,4 +87,8 @@ define("SAVED_CHANGE", "Deine Änderungen wurden gespeichert.");
 define("EDIT_NO_PERMS", "Du kannst diesen Benutzer nicht verändern.");
 define("EDIT_NOT_YOU", "Du kannst dich nicht selbst bearbeiten.");
 define("NO_REQUEST", "Es wurde kein Benutzer angefordert.");
+//search.php
+define("SEARCH", "Suche");
+define("SEARCH_KEY", "Suchbegriff");
+define("NO_SEARCH_RESULT", "Es wurden keine Suchergebnisse gefunden.");
  ?>
