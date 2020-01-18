@@ -34,6 +34,9 @@ define("SAVE", "Speichern");
 define("SAVED", "Deine Änderungen wurden gespeichert.");
 define("CAPTCHA_PUBLIC_KEY", "Dein Webseitenschlüssel");
 define("CAPTCHA_PRIVATE_KEY", "Dein privater Schlüssel");
+define("LANGUAGE", "Sprache");
+define("MC_REGISTER", "Minecraft Registrierung");
+define("MC_REGISTER_DESC", "Wenn du diese Funktion aktivierst benötigst du das Minecraft Plugin damit Benutzer sich einen Account anlegen können.");
 //Addfaq.php
 define("FAQ_CREATE_HEADING", "Neuen FAQ Eintrag erstellen");
 define("ADD", "Hinzufügen");
@@ -78,10 +81,19 @@ define("LASTLOGIN", "letzter Login");
 define("FIRSTLOGIN", "erster Login");
 //login.php
 define("PASSWORD", "Passwort");
+define("PASSWORD_AGAIN", "Passwort wiederholen");
 define("LOGIN_ERR", "Der Login ist fehlgeschlagen. Überprüfe deine Eingabe.");
 define("LOGIN_BTN", "Erstelle einen neuen Account");
 define("LOGIN_BTN_DESC", "<h3>Wie kann ich einen neuen Account erstellen?</h3>
 <p>Benutze auf dem Server den Befehl <strong>/ticket createacc Email Passwort</strong> um einen Account zu erstellen.</p>");
+//register.php
+define("REGISTER", "Registrieren");
+define("REGISTER_USER_ERR", "Dieser Benutzername ist bereits vergeben");
+define("REGISTER_EMAIL_ERR", "Diese Email ist bereits vergeben");
+define("REGISTER_PW_ERR", "Deine Passwörter stimmen nicht überein");
+define("REGISTER_OK", "Dein Account wurde erfolgreich erstellt");
+define("DISABLED_HEADER", "Fehler");
+define("DISABLED_MESSAGE", "Die manuelle Registierung wurde von einem Administrator deaktiviert. Bitte benutze den Befehl auf dem Minecraft Server um einen Account zu erstellen.");
 //editaccount.php
 define("SAVED_CHANGE", "Deine Änderungen wurden gespeichert.");
 define("EDIT_NO_PERMS", "Du kannst diesen Benutzer nicht verändern.");

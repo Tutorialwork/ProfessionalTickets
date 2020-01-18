@@ -71,20 +71,30 @@ if(isset($_SESSION["username"])){
         <br>
         <hr>
         <br>
-        <button class="btn" onclick="show()"><?php echo LOGIN_BTN; ?></button>
-        <div id="create-acc" style="display: none;">
-          <?php echo LOGIN_BTN_DESC; ?>
-        </div>
-        <script type="text/javascript">
-        function show() {
-          var x = document.getElementById("create-acc");
-          if (x.style.display === "none") {
-            x.style.display = "block";
-          } else {
-            x.style.display = "none";
+        <?php
+        if(getSetting("mc_register") == "0"){
+          ?>
+          <a href="register.php"><button class="btn"><?php echo REGISTER; ?></button></a>
+          <?php
+        } else {
+          ?>
+          <button class="btn" onclick="show()"><?php echo LOGIN_BTN; ?></button>
+          <div id="create-acc" style="display: none;">
+            <?php echo LOGIN_BTN_DESC; ?>
+          </div>
+          <script type="text/javascript">
+          function show() {
+            var x = document.getElementById("create-acc");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
           }
+          </script>
+          <?php
         }
-        </script>
+        ?>
       </div>
     </div>
   </body>

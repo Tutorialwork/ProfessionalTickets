@@ -50,6 +50,7 @@ isset($_SESSION["user"]) && isset($_SESSION["password"])){
     setSetting("captcha", $_POST["captcha"]);
     setSetting("captcha_public", $_POST["captcha-public"]);
     setSetting("captcha_private", $_POST["captcha-secret"]);
+    setSetting("mc_register", $_POST["mcregister"]);
     ?>
     <meta http-equiv="refresh" content="0; URL=../index.php">
     <?php
@@ -73,10 +74,19 @@ isset($_SESSION["user"]) && isset($_SESSION["password"])){
       <div class="flex-item login">
         <h1>Setup</h1>
         <p>Now you can change the default settings.</p>
+        <br>
+        <hr>
+        <h3>Language</h3>
         <form action="step3.php" method="post">
           <select name="lang">
             <option value="en">English</option>
             <option value="de">German (Deutsch)</option>
+          </select>
+          <h3>Minecraft Register</h3>
+          <p>When you enable this function you need the Minecraft plugin that users can create a new account.</p>
+          <select name="mcregister">
+            <option value="1">Enabled</option>
+            <option value="0">Disabled</option>
           </select>
           <h3>Captcha</h3>
           <select name="captcha">

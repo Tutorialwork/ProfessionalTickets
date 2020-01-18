@@ -135,4 +135,14 @@ function updateLogin($username){
   $stmt->bindParam(":value", $now, PDO::PARAM_STR);
   $stmt->execute();
 }
+function migrate(){
+  //Update 2.3
+  require("mysql.php");
+  $stmt = $mysql->prepare("SELECT * FROM settings WHERE NAME = mc_register");
+  $stmt->execute();
+  if($stmt->rowCount() == 0){
+    $stmt = $mysql->prepare("INSERT INTO settings (NAME, VALUE) VALUES ('mc_register', '1')");
+    $stmt->execute();
+  }
+}
  ?>

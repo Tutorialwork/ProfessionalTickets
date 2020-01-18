@@ -195,11 +195,13 @@ if(!isset($_SESSION["username"])){
       </div>
       <div class="flex-item">
         <?php
+        migrate();
         if(isset($_POST["submit"])){
           setSetting("lang", $_POST["lang"]);
           setSetting("captcha", $_POST["captcha"]);
           setSetting("captcha_public", $_POST["captcha-public"]);
           setSetting("captcha_private", $_POST["captcha-secret"]);
+          setSetting("mc_register", $_POST["mcregister"]);
           ?>
           <div class="success">
             <?php echo SAVED; ?>
@@ -208,6 +210,7 @@ if(!isset($_SESSION["username"])){
         }
          ?>
         <h1><?php echo SETTINGS; ?></h1>
+        <h3><?php echo LANGUAGE; ?></h3>
         <form action="admin.php" method="post">
           <select name="lang">
             <?php
@@ -220,6 +223,23 @@ if(!isset($_SESSION["username"])){
               ?>
               <option value="de">German (Deutsch)</option>
               <option value="en">English</option>
+              <?php
+            }
+             ?>
+          </select>
+          <h3><?php echo MC_REGISTER; ?></h3>
+          <p><?php echo MC_REGISTER_DESC; ?></p>
+          <select name="mcregister">
+            <?php
+            if(getSetting("mc_register") == "0"){
+              ?>
+              <option value="0"><?php echo DISABLED; ?></option>
+              <option value="1"><?php echo ENABLED; ?></option>
+              <?php
+            } else {
+              ?>
+              <option value="1"><?php echo ENABLED; ?></option>
+              <option value="0"><?php echo DISABLED; ?></option>
               <?php
             }
              ?>

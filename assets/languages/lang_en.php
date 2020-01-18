@@ -34,6 +34,9 @@ define("SAVE", "Save");
 define("SAVED", "Your changes was saved.");
 define("CAPTCHA_PUBLIC_KEY", "Your website key");
 define("CAPTCHA_PRIVATE_KEY", "Your secret key");
+define("LANGUAGE", "Language");
+define("MC_REGISTER", "Minecraft Register");
+define("MC_REGISTER_DESC", "When you enable this function you need the Minecraft plugin that users can create a new account.");
 //Addfaq.php
 define("FAQ_CREATE_HEADING", "Create FAQ entry");
 define("ADD", "Add");
@@ -78,10 +81,19 @@ define("LASTLOGIN", "Last login");
 define("FIRSTLOGIN", "First login");
 //login.php
 define("PASSWORD", "Password");
+define("PASSWORD_AGAIN", "Password again");
 define("LOGIN_ERR", "Login failed. Please check your entered username and password.");
 define("LOGIN_BTN", "Create a new account");
 define("LOGIN_BTN_DESC", "<h3>How I can create a account?</h3>
 <p>Use the command <strong>/ticket createacc Email Password</strong> on the Minecraft server to create a command.</p>");
+//register.php
+define("REGISTER", "Register");
+define("REGISTER_USER_ERR", "Sorry but this username is taken");
+define("REGISTER_EMAIL_ERR", "Sorry but this email is taken");
+define("REGISTER_PW_ERR", "Sorry but your passwords do not match");
+define("REGISTER_OK", "Your account was successfully created");
+define("DISABLED_HEADER", "Error");
+define("DISABLED_MESSAGE", "The manual registration was disabled by an admin. Please use the command at the Minecraft server to create an account.");
 //editaccount.php
 define("SAVED_CHANGE", "Your changes was successfully saved.");
 define("EDIT_NO_PERMS", "You can't edit this user.");
