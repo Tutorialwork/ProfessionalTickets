@@ -218,11 +218,19 @@ if(!isset($_SESSION["username"])){
               ?>
               <option value="en">English</option>
               <option value="de">German (Deutsch)</option>
+              <option value="cn">Chinese (中文)</option>
+              <?php
+            } else if(getSetting("lang") == "cn"){
+              ?>
+              <option value="cn">Chinese (中文)</option>
+              <option value="en">English</option>
+              <option value="de">German (Deutsch)</option>
               <?php
             } else {
               ?>
               <option value="de">German (Deutsch)</option>
               <option value="en">English</option>
+              <option value="cn">Chinese (中文)</option>
               <?php
             }
              ?>

@@ -81,6 +81,7 @@ isset($_SESSION["user"]) && isset($_SESSION["password"])){
           <select name="lang">
             <option value="en">English</option>
             <option value="de">German (Deutsch)</option>
+            <option value="cn">Chinese (中文)</option>
           </select>
           <h3>Minecraft Register</h3>
           <p>When you enable this function you need the Minecraft plugin that users can create a new account.</p>
