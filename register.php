@@ -44,7 +44,7 @@ if(isset($_SESSION["username"])){
                       if($_POST["pw"] == $_POST["pw2"]){
                           $time = time();
                           $stmt = $mysql->prepare("INSERT INTO accounts (USERNAME, EMAIL, PASSWORD, LASTLOGIN, FIRSTLOGIN, ACCOUNTRANK) VALUES (
-                              :user, :mail, :pw, :time, :time, 1
+                              :user, :mail, :pw, :time, :time, 0
                           )");
                           $hash = password_hash($_POST["pw"], PASSWORD_BCRYPT);
                           $stmt->execute(array(":user" => $_POST["username"], ":mail" => $_POST["email"], ":pw" => $hash, ":time" => $time));
